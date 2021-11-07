@@ -6,38 +6,16 @@
                 <div class="notify-row">
                     <ul class="top-menu">
                         <li class="li-badge">
-                            <el-tooltip class="item" effect="dark" content="访问github" placement="top">
-                                <a :href='github' target="_blank">
-                                      <icon-svg icon-class="iconGithub" />
-                                </a>
-                            </el-tooltip>
-                        </li>
-                        <li class="li-badge">
-                            <a :href='github' target="_blank" v-popover:qcode>
-                                <icon-svg icon-class="iconwechat" />
-                                <el-popover
-                                    ref="qcode"
-                                    popper-class="qcodepopper"
-                                    placement="bottom"
-                                    trigger="hover">
-                                        <div class="wechat-area cflex">
-                                            <p class="titles">加我微信</p>
-                                            <img :src="wechat.wechatImg" alt="加我微信"  />
-                                        </div>
-                               </el-popover>
-                            </a>
-                        </li>
-                        <li class="li-badge">
                             <a :href='github' target="_blank" v-popover:qqcode>
-						        <icon-svg icon-class="iconqq" />
+						        <i style="font-size: 1.3em" class="el-icon-mobile-phone"></i>
                                  <el-popover
                                     ref="qqcode"
                                     popper-class="qcodepopper"
                                     placement="bottom"
                                     trigger="hover">
                                         <div class="wechat-area cflex">
-                                            <p class="titles">加入qq群</p>
-                                            <img :src="qq.qqImg" alt="加入qq群"  />
+                                            <p class="titles">手机客户端</p>
+                                            <img :src="qq.qqImg" alt="手机客户端"  />
                                         </div>
                                 </el-popover>
                             </a>
@@ -49,20 +27,6 @@
                        class="el-menu-demo" 
                        mode="horizontal" 
                        >
-                        <el-submenu index="1" popper-class="langItem">
-                            <template slot="title">
-                                <img :src="langLogo" class='langAvatar' alt="">
-                            </template>
-                            <el-menu-item index="1-1" @click="changeLocale('zh')">
-                                <img :src="chinaImg" class='langAvatar' alt="">
-                                <span class="intro">中文</span>
-                            </el-menu-item>
-                            <el-menu-item index="1-2" @click="changeLocale('en')">
-                                <img :src="americaImg" class='langAvatar' alt="">
-                                <span class="intro">EngList</span>
-                            </el-menu-item>
-                        </el-submenu>
-
                         <el-submenu index="2"  popper-class="infoItem">
                             <template slot="title">
                                 <div class='welcome'>
@@ -212,7 +176,7 @@
        border:1px solid;
     }
     .userinfo-right{
-        width:320px;
+        width:180px;
         padding: 0 10px;
         justify-content: space-between;
     }

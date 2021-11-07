@@ -50,7 +50,7 @@ export default {
 	},
 	methods:{
 		handleLefeMenu(){
-		    this.$store.dispatch('setLeftCollapse');  // 折叠菜单
+		  this.$store.dispatch('setLeftCollapse');  // 折叠菜单
 			this.$store.dispatch('handleLeftMenu');  // 改变菜单宽度 180->35/35-180
 			this.changeBarDirection = !this.changeBarDirection;
 		}
